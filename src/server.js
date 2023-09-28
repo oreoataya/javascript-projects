@@ -9,8 +9,8 @@ const routes = require('./routes');
 // eslint-disable-next-line padded-blocks
 const init = async () => {
   const server = Hapi.server({
-    port: 5000,
-    host: 'localhost',
+    port: 9000,
+    host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
     routes: {
       cors: {
         origin: ['*'],
