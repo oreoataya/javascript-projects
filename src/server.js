@@ -21,6 +21,7 @@ const init = async () => {
   server.route(routes);
 
   await server.start();
+  console.log('Percobaan commit ketiga melihat perubahan pada repo');
   console.log(`Server sedang berjalan pada ${server.info.uri}`);
 };
 
